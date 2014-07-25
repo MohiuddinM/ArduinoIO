@@ -8,10 +8,13 @@ Any pin is repersented using an array that contains, the port address and the pi
 
 This array can then be repersented as a new type 'PIN' which is only a uint8_t[4]
 
-All the pins could be defined in the variants like 
+All the pins could be defined in the variants like
+```sh
 #define  PIN_13 {0x07, 0x25, 0x00, 0x44}
-
-In the sketch one could simply do:
+```
+In the sketch one could simply do
+```sh
 const PIN led = PIN_13;
 _pinMode(led, OUTPUT);
 _digitalWrite(led, HIGH);
+```
