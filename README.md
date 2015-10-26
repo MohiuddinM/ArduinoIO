@@ -18,5 +18,3 @@ const PIN led = PIN_13;
 _pinMode(led, OUTPUT);
 _digitalWrite(led, HIGH);
 ```
-
-http://www.google.com
