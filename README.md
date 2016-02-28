@@ -10,7 +10,7 @@ This array can then be repersented as a new type 'PIN' which is only a uint8_t[4
 
 All the pins could be defined in the variants like
 ```sh
-#define  PIN_13 {0x07, 0x25, 0x00, 0x44}
+#define  PIN_13 {0x07, 0x25, 0x00, 0x44}    // { pin number, port address, timer output, timer address }
 ```
 In the sketch one could simply do
 ```sh
@@ -18,3 +18,8 @@ const PIN led = PIN_13;
 _pinMode(led, OUTPUT);
 _digitalWrite(led, HIGH);
 ```
+
+TODO
+----
+
+Instead of providing pin numbers, provide pin masks
