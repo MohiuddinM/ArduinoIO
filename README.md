@@ -5,6 +5,7 @@ This is an arduino library that I made for digital pin functions, it is faster t
 
 
 Any pin of an arduino is repersented using an array. This array contains four things:
+
 1. Pin mask for that pin
 2. Address of the port to which the pin belongs
 3. Timer mask (0x00 if pin is not PWM)
