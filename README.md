@@ -4,7 +4,7 @@ FastIO
 This is an arduino library that I made for digital pin functions, it is faster than orignal functions and takes less memory.
 
 
-Any pin of an arduino is repersented using an array. This array contains four things:
+Any pin of an arduino is represented using an array. This array contains four things:
 
 1. Pin mask for that pin
 2. Address of the port to which the pin belongs
