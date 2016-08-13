@@ -36,63 +36,63 @@ extern "C"{
 
 /***************************** Defines ***********************************************/
 
-#define PINB    0x23
-#define PINC    0x26
-#define PIND    0x29
+#define FASTIO_PINB    0x23
+#define FASTIO_PINC    0x26
+#define FASTIO_PIND    0x29
 
-#define DDRB    0x24
-#define DDRC    0x27
-#define DDRD    0x2A
+#define FASTIO_DDRB    0x24
+#define FASTIO_DDRC    0x27
+#define FASTIO_DDRD    0x2A
 
-#define PORTB   0x25
-#define PORTC   0x28
-#define PORTD   0x2B
-
-
-#define BIT0 0b00000001
-#define BIT1 0b00000010
-#define BIT2 0b00000100
-#define BIT3 0b00001000
-#define BIT4 0b00010000
-#define BIT5 0b00100000
-#define BIT6 0b01000000
-#define BIT7 0b10000000
-
-#define TCCR0A  0x44
-#define TCCR0B  0x45
-#define TCCR1A  0x80
-#define TCCR1B  0x81
-#define TCCR1C  0x82
-#define TCCR2A  0xB0
-#define TCCR2B  0xB1
+#define FASTIO_PORTB   0x25
+#define FASTIO_PORTC   0x28
+#define FASTIO_PORTD   0x2B
 
 
-#define BIT7_6 0b11000000
-#define BIT5_4 0b00110000
+#define FASTIO_BIT0 0b00000001
+#define FASTIO_BIT1 0b00000010
+#define FASTIO_BIT2 0b00000100
+#define FASTIO_BIT3 0b00001000
+#define FASTIO_BIT4 0b00010000
+#define FASTIO_BIT5 0b00100000
+#define FASTIO_BIT6 0b01000000
+#define FASTIO_BIT7 0b10000000
+
+#define FASTIO_TCCR0A  0x44
+#define FASTIO_TCCR0B  0x45
+#define FASTIO_TCCR1A  0x80
+#define FASTIO_TCCR1B  0x81
+#define FASTIO_TCCR1C  0x82
+#define FASTIO_TCCR2A  0xB0
+#define FASTIO_TCCR2B  0xB1
 
 
-#define  PIN_0    {BIT0, PORTD, 0x00, 0x00}
-#define  PIN_1    {BIT1, PORTD, 0x00, 0x00}
-#define  PIN_2    {BIT2, PORTD, 0x00, 0x00}
-#define  PIN_3    {BIT3, PORTD, BIT5_4, TCCR2A}//oc2b
-#define  PIN_4    {BIT4, PORTD, 0x00, 0x00}
-#define  PIN_5    {BIT5, PORTD, BIT5_4, TCCR0A}//oc0b
-#define  PIN_6    {BIT6, PORTD, BIT7_6, TCCR0A}//oc0a
-#define  PIN_7    {BIT7, PORTD, 0x00, 0x00}
+#define FASTIO_BIT7_6 0b11000000
+#define FASTIO_BIT5_4 0b00110000
 
-#define  PIN_8    {BIT0, PORTB, 0x00, 0x00}
-#define  PIN_9    {BIT1, PORTB, BIT7_6, TCCR1A}//oc1a
-#define  PIN_10   {BIT2, PORTB, BIT5_4, TCCR1A}//oc1b
-#define  PIN_11   {BIT3, PORTB, BIT7_6, TCCR2A}//oc2a
-#define  PIN_12   {BIT4, PORTB, 0x00, 0x00}
-#define  PIN_13   {BIT5, PORTB, 0x00, 0x00}
 
-#define  PIN_14   {BIT0, PORTC, 0x00, 0x00}
-#define  PIN_15   {BIT1, PORTC, 0x00, 0x00}
-#define  PIN_16   {BIT2, PORTC, 0x00, 0x00}
-#define  PIN_17   {BIT3, PORTC, 0x00, 0x00}
-#define  PIN_18   {BIT4, PORTC, 0x00, 0x00}
-#define  PIN_19   {BIT5, PORTC, 0x00, 0x00}
+#define  PIN_0    {FASTIO_BIT0, FASTIO_PORTD, 0x00, 0x00}
+#define  PIN_1    {FASTIO_BIT1, FASTIO_PORTD, 0x00, 0x00}
+#define  PIN_2    {FASTIO_BIT2, FASTIO_PORTD, 0x00, 0x00}
+#define  PIN_3    {FASTIO_BIT3, FASTIO_PORTD, FASTIO_BIT5_4, FASTIO_TCCR2A}//oc2b
+#define  PIN_4    {FASTIO_BIT4, FASTIO_PORTD, 0x00, 0x00}
+#define  PIN_5    {FASTIO_BIT5, FASTIO_PORTD, FASTIO_BIT5_4, FASTIO_TCCR0A}//oc0b
+#define  PIN_6    {FASTIO_BIT6, FASTIO_PORTD, FASTIO_BIT7_6, FASTIO_TCCR0A}//oc0a
+#define  PIN_7    {FASTIO_BIT7, FASTIO_PORTD, 0x00, 0x00}
+
+#define  PIN_8    {FASTIO_BIT0, FASTIO_PORTB, 0x00, 0x00}
+#define  PIN_9    {FASTIO_BIT1, FASTIO_PORTB, FASTIO_BIT7_6, FASTIO_TCCR1A}//oc1a
+#define  PIN_10   {FASTIO_BIT2, FASTIO_PORTB, FASTIO_BIT5_4, FASTIO_TCCR1A}//oc1b
+#define  PIN_11   {FASTIO_BIT3, FASTIO_PORTB, FASTIO_BIT7_6, FASTIO_TCCR2A}//oc2a
+#define  PIN_12   {FASTIO_BIT4, FASTIO_PORTB, 0x00, 0x00}
+#define  PIN_13   {FASTIO_BIT5, FASTIO_PORTB, 0x00, 0x00}
+
+#define  PIN_14   {FASTIO_BIT0, FASTIO_PORTC, 0x00, 0x00}
+#define  PIN_15   {FASTIO_BIT1, FASTIO_PORTC, 0x00, 0x00}
+#define  PIN_16   {FASTIO_BIT2, FASTIO_PORTC, 0x00, 0x00}
+#define  PIN_17   {FASTIO_BIT3, FASTIO_PORTC, 0x00, 0x00}
+#define  PIN_18   {FASTIO_BIT4, FASTIO_PORTC, 0x00, 0x00}
+#define  PIN_19   {FASTIO_BIT5, FASTIO_PORTC, 0x00, 0x00}
 
 
 #define PORT_PTR  *((uint8_t*)pp[1])
